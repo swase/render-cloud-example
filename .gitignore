@@ -2,6 +2,8 @@
 __pycache__
 venv
 .venv
+env
+.env
 node_modules
 # *setup.sh
 *setup_env_var_local.sh

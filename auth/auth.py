@@ -3,6 +3,7 @@ from flask import abort, request, _request_ctx_stack
 from functools import wraps
 from jose import jwt
 from urllib.request import urlopen
+import os
 
 
 AUTH0_DOMAIN = 'dev-i10rhhf17l7lksi2.us.auth0.com'
@@ -161,7 +162,10 @@ def requires_auth(permission=''):
     def requires_auth_decorator(f):
         @wraps(f)
         def wrapper(*args, **kwargs):
-
+            """ Below lines to bypass the authentication steps"""
+            if os.environ.get('RUN_WITH_NO_AUTH') == "true":
+                return f("",*args, **kwargs)
+            """ End of bypass"""
             token = get_token_auth_header()
             payload = verify_decode_jwt(token)
             check_permissions(permission, payload)
