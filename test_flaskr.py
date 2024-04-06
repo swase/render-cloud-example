@@ -89,6 +89,11 @@ class CapstoneTestCase(unittest.TestCase):
         self.database_name = os.environ.get('TABLE_NAME_TEST')
         self.database_path = "postgresql://{}:{}@{}/{}".format(
             user, password, "localhost:5432", self.database_name)
+        
+        database_uri = os.environ.get('TEST_DATABASE_URI')
+        if database_uri:
+            self.database_path = database_uri
+        
         setup_db(self.app, self.database_path)
         self.init_test_data()
         # binds the app to the current context

@@ -11,8 +11,11 @@ database_path = "postgresql://{}:{}@{}/{}".format(
     user, password, "localhost:5432", database_name
 )
 
+database_uri = os.environ.get('DATABASE_URI')
 db = SQLAlchemy()
 
+if database_uri:
+    database_path = database_uri
 """
 setup_db(app)
     binds a flask application and a SQLAlchemy service
