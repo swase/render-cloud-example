@@ -1,17 +1,3 @@
-# #!/bin/bash
-# export TABLE_NAME=capstone
-# export DB_USER=
-# export DB_PASSWORD=
-# export TABLE_NAME_TEST=capstone_test
-# export DB_USER_TEST=
-# export DB_PASSWORD_TEST=
-# export API_AUDIENCE=default
-# export AUTH0_DOMAIN=default
-# export TEAM_LEAD_TOKEN=
-# export TEAM_MEMBER_TOKEN=
-
-# # echo $DB_PASSWORD=
-
 #!/bin/bash
 export TABLE_NAME=capstone
 export DB_USER=db_user
@@ -28,5 +14,3 @@ export AUTH0_DOMAIN=dev-i10rhhf17l7lksi2.us.auth0.com
 export AUTH0_ALGORITHM=RS256
 export API_AUDIENCE=CapstoneAPI
 export PYTHON_VERSION=3.7.17
-
-# echo $DB_PASSWORD=
