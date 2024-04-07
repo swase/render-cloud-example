@@ -6,9 +6,9 @@ from urllib.request import urlopen
 import os
 
 
-AUTH0_DOMAIN = 'dev-i10rhhf17l7lksi2.us.auth0.com'
-ALGORITHMS = ['RS256']
-API_AUDIENCE = 'CapstoneAPI'
+AUTH0_DOMAIN = os.environ.get("AUTH0_DOMAIN")
+ALGORITHMS =  os.environ.get("AUTH0_ALGORITHM")
+API_AUDIENCE = os.environ.get("API_AUDIENCE")
 
 ## AuthError Exception
 '''

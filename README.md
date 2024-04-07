@@ -8,8 +8,10 @@ The work work here is for the completion of the module : Capstone Project. (Part
 
 Any further information on the project should be looked up on the above links.
 
+The API consists of mainly 3 resources with GET, POST, PATCH and DELETE. /authors, /publishers, /articles follow standard REST principles. Endpoint /checkifworking is simply used to output a string to check if the application is running.
+
 ## About the Stack
-The app is made up of mainly 2 parts - a backend (python, Flask, SQLAlchemy and PostgresSQL) and Testing(Flask and unittest)
+The app is made up of mainly 2 parts - a backend (python, Flask, SQLAlchemy and PostgresSQL) and Testing(Flask and unittest).
 ### Backend
 
 The backend files are contained within the root directory. They consist of folders: auth (used for handling authentication that is done using third party provider Auth0. https://auth0.com/)
@@ -79,6 +81,10 @@ export AUTH0_DOMAIN=default
 export TEAM_LEAD_TOKEN=
 export TEAM_MEMBER_TOKEN=
 export RUN_WITH_NO_AUTH=false
+export AUTH0_DOMAIN=<your-auth0-domain>
+export AUTH0_ALGORITHM=<Auth0-algorithm>
+export API_AUDIENCE=<Your-auth0-api-audience>
+export PYTHON_VERSION=3.7.17
 ```
 
 To run the server, execute:
