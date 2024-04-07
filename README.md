@@ -87,10 +87,9 @@ export API_AUDIENCE=<Your-auth0-api-audience>
 export PYTHON_VERSION=3.7.17
 ```
 
-To run the server, execute:
+To run the application, execute(ensure environment variables adjusted as needed):
 ```bash
 source ./run.sh
-flask run
 ```
 
 ## API Reference
